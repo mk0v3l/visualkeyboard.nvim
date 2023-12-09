@@ -126,7 +126,7 @@ local num = {
 	"  └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───────────┘",
 }
 
--- popup:mount()
+popup:mount()
 function M.test()
 	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, M.mess)
