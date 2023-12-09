@@ -12,12 +12,12 @@ local popup = Popup({
 		style = "none",
 	},
 	position = {
-		row = 1,
+		row = 0,
 		col = 100,
 	},
 	size = {
-		width = "45%",
-		height = "25%",
+		width = "55",
+		height = "9",
 	},
 })
 local oldkey = {
