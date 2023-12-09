@@ -13,7 +13,7 @@ local popup = Popup({
 	},
 	position = {
 		row = 0,
-		col = 100,
+		col = 80,
 	},
 	size = {
 		width = "55",
