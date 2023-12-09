@@ -1,9 +1,9 @@
-local api, fn = vim.api, vim.fn
+-- local api, fn = vim.api, vim.fn
 
 local M = {}
 
 local Popup = require("nui.popup")
-local event = require("nui.utils.autocmd").event
+-- local event = require("nui.utils.autocmd").event
 
 local popup = Popup({
 	enter = false,
