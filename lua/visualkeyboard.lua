@@ -139,7 +139,7 @@ end
 function M.toggle()
 	if toggleflag == false then
 		popup:mount()
-		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
+		-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 		popup:mount()
 		toggleflag = true
 	else
@@ -149,6 +149,7 @@ function M.toggle()
 	end
 end
 
+-- maj=vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 function M.togglemaj()
 	if togglemajflag == false then
 		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
