@@ -127,7 +127,9 @@ local num = {
 }
 
 popup:mount()
+local togglemajflag = false
 local toggleflag = false
+
 function M.test()
 	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, M.mess)
@@ -138,8 +140,19 @@ function M.toggle()
 		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 		toggleflag = true
 	else
-		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, num)
+		popup:hide()
+		-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, num)
 		toggleflag = false
+	end
+end
+
+function M.togglemaj()
+	if togglemajflag == false then
+		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
+		togglemajflag = true
+	else
+		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, num)
+		togglemajflag = false
 	end
 end
 
