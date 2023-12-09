@@ -100,6 +100,7 @@ local popup = Popup({
 		width = "45%",
 		height = "25%",
 	},
+	mess = "0000",
 })
 
 local nummaj = {
@@ -127,7 +128,8 @@ local num = {
 
 -- popup:mount()
 function M.test()
-	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
+	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
+	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, M.mess)
 end
 
 -----@deprecated
