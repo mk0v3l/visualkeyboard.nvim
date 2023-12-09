@@ -126,16 +126,13 @@ local num = {
 }
 
 -- popup:mount()
--- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
-function M.onBufEnter()
-	if api.nvim_get_mode().mode == "i" then
-		M.onInsertEnter()
-	end
+function M.test()
+	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 end
 
----@deprecated
-function M.setup()
-	-- moved to plugin/
-end
+-----@deprecated
+--function M.setup()
+--	-- moved to plugin/
+--end
 
 return M
