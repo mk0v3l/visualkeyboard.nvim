@@ -139,8 +139,9 @@ end
 function M.toggle()
 	if toggleflag == false then
 		popup:mount()
+		popup:show()
 		-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
-		popup:mount()
+		-- popup:mount()
 		toggleflag = true
 	else
 		popup:hide()
