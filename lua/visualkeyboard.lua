@@ -47,8 +47,9 @@ local keyboard = {
 local majflag = false
 local showflag = false
 
+vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboard)
 function M.show()
-	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboard)
+	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboard)
 	popup:mount()
 	showflag = true
 	majflag = false
