@@ -132,7 +132,7 @@ local toggleflag = false
 vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 function M.test()
 	popup:mount()
-	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
+	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, M.mess)
 end
 
