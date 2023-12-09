@@ -103,7 +103,7 @@ local popup = Popup({
 	-- mess = "0000",
 })
 
-local nummaj = {
+local keyboardmaj = {
 	"┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐",
 	"│ ~ │ ! │ @ │ # │ $ │ % │ ^ │ & │ * │ ( │ ) │ _ │ + │",
 	"└─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┐",
@@ -114,7 +114,7 @@ local nummaj = {
 	"  │ W │ X │ C │ V │ B │ N │ : │ < │ > │ ? │  <Shift>  │",
 	"  └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───────────┘",
 }
-local num = {
+local keyboard = {
 	"┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐",
 	"│ ` │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │ = │",
 	"└─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┐",
@@ -129,11 +129,15 @@ local num = {
 local togglemajflag = false
 local toggleflag = false
 
-vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
-function M.test()
+-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboardmaj)
+function M.show()
+	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboard)
 	popup:mount()
-	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
-	-- vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, M.mess)
+end
+
+function M.showmaj()
+	vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboardmaj)
+	popup:mount()
 end
 
 function M.toggle()
@@ -153,10 +157,10 @@ end
 -- maj=vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
 function M.togglemaj()
 	if togglemajflag == false then
-		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, nummaj)
+		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboardmaj)
 		togglemajflag = true
 	else
-		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, num)
+		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboard)
 		togglemajflag = false
 	end
 end
