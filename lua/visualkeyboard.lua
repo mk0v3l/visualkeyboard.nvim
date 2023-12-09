@@ -83,4 +83,14 @@ function M.togglemaj()
 	end
 end
 
+function M.switch()
+	if majflag == false then
+		majflag = true
+		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboardmaj)
+	else
+		majflag = false
+		vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, keyboard)
+	end
+end
+
 return M
