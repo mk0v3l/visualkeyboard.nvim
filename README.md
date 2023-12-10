@@ -17,4 +17,3 @@ require'visualkeyboard'.showmaj()
 require'visualkeyboard'.hide()
 require'visualkeyboard'.switch()
 
-
